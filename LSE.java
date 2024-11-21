@@ -5,7 +5,7 @@ O size retorna o tamanho da lista;
 O add (elemento) adiciona no final da lista;
 O get (index) – retorna o nodo na posição (ou null se não tem aquela posição);
 O add (index, elemento) adiciona na posição pedida (lembrar de checar <Primeiro>);
-O remove (index) remove o elemento daquele index da lista;*/
+O remove (index) remove o elemento daquele index da lista.*/
 
 class Nodo {
     int valor;
