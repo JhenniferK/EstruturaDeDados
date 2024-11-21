@@ -1,5 +1,5 @@
-//Criar um método que receba uma lista e um número e retorne se esse número está ou não na lista (boolean)
-//Faça uma versão recursiva e uma iterativa
+/*Criar um método que receba uma lista e um número e retorne se esse número está ou não na lista (boolean)
+Faça uma versão recursiva e uma iterativa*/
 
 //Iterativa
 import java.util.List;
