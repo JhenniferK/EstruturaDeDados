@@ -1,3 +1,14 @@
+/*Implementação de Lista duplamente encadeada
+
+• Crie o objeto do Nodo (valor, prox, ant)
+• Crie o Objeto da ListaSEncadeada
+• Precisa ter o Primeiro, Último e Tamanho (variáveis)
+• O size retorna o tamanho da lista
+• O addFinal (elemento) adiciona no final da lista
+• O addComeco (elemento) adiciona no começo da lista
+• O add (index, elemento) adiciona na posição pedida
+• O remove (index) remove o elemento daquele index da lista*/
+
 public class ListaDEncadeada {
     private class Nodo {
         int valor;
