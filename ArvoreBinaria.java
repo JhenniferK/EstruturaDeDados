@@ -1,11 +1,11 @@
 //Implementação de árvore binária com inserção, remoção e busca
 
-class Nodo {
+class NodoArvore {
     int valor;
-    Nodo esq;
-    Nodo dir;
+    NodoArvore esq;
+    NodoArvore dir;
 
-    public Nodo (int valor) {
+    public NodoArvore (int valor) {
         this.valor = valor;
         this.esq = null;
         this.dir = null;
@@ -13,21 +13,21 @@ class Nodo {
 }
 
 class Arvore {
-    private Nodo raiz;
+    private NodoArvore raiz;
 
     public Arvore() {
         this.raiz = null;
     }
 
     public void inserir(int valor) {
-        Nodo novoNodo = new Nodo(valor);
+        NodoArvore novoNodo = new NodoArvore(valor);
         if (raiz == null) {
             raiz = novoNodo;
             return;
         }
 
-        Nodo atual = raiz;
-        Nodo anterior = null;
+        NodoArvore atual = raiz;
+        NodoArvore anterior = null;
         while (atual != null) {
             anterior = atual;
             if (valor < atual.valor) {
@@ -47,7 +47,7 @@ class Arvore {
     }
 
     public void remover(int valor) {
-        Nodo atual = raiz, anterior = null;
+        NodoArvore atual = raiz, anterior = null;
 
         while (atual != null && atual.valor != valor) {
             anterior = atual;
@@ -61,7 +61,7 @@ class Arvore {
         if (atual == null) return;
 
         if (atual.esq == null || atual.dir == null) {
-            Nodo novoFilho = (atual.esq != null) ? atual.esq : atual.dir;
+            NodoArvore novoFilho = (atual.esq != null) ? atual.esq : atual.dir;
 
             if (anterior == null) {
                 raiz = novoFilho;
@@ -71,8 +71,8 @@ class Arvore {
                 anterior.dir = novoFilho;
             }
         } else {
-            Nodo sucessor = atual.dir;
-            Nodo paiSucessor = atual;
+            NodoArvore sucessor = atual.dir;
+            NodoArvore paiSucessor = atual;
             while (sucessor.esq != null) {
                 paiSucessor = sucessor;
                 sucessor = sucessor.esq;
@@ -88,7 +88,7 @@ class Arvore {
     }
 
     public boolean buscar(int valor) {
-        Nodo atual = raiz;
+        NodoArvore atual = raiz;
         while (atual != null) {
             if (valor == atual.valor) {
                 return true;
@@ -101,7 +101,7 @@ class Arvore {
     }
 
     public static void main(String[] args) {
-        Arvore arvore = new Arvore();
+        ArvoreAVL arvore = new ArvoreAVL();
 
         arvore.inserir(16);
         arvore.inserir(32);
