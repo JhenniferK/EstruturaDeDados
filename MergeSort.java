@@ -4,18 +4,18 @@ public class MergeSort {
     public static void main(String[] args) {
         int[] lista = {5, 2, 9, 1, 4, 8};
         int p = 0, r = lista.length - 1;
-        merge(lista, p, r);
+        mergeSort(lista, p, r);
 
         for (int num : lista) {
             System.out.print(num + " ");
         }
     }
 
-    public static void merge(int[] lista, int p, int r) {
+    public static void mergeSort(int[] lista, int p, int r) {
         if (p < r) {
-            int q = (p + r)/2;
-            merge(lista, p, q);
-            merge(lista, q + 1, r);
+            int q = (p + r) / 2;
+            mergeSort(lista, p, q);
+            mergeSort(lista, q + 1, r);
             merge(lista, p, q, r);
         }
     }
