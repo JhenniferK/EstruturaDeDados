@@ -1,6 +1,23 @@
-# 📚 Resoluções de Exercícios - Estrutura de Dados
+# 🧮 Estrutura de Dados
 
-Bem-vindo(a) ao meu repositório de **Resoluções de Exercícios** de **Estrutura de Dados**! Aqui estão as soluções para diversos tipos de exercícios relacionados a estruturas fundamentais. Esses exercícios foram resolvidos em **Java**, com o objetivo de ajudar no aprendizado dos principais conceitos de Estruturas de Dados.
+Bem vindo(a)! Este repositório reúne atividades, exercícios e projetos desenvolvidos na disciplina de **Estrutura de Dados**, cursada no Instituto Federal da Paraíba - Campus Esperança, durante o período letivo de 2025.
+
+## 📚 Conteúdo
+
+Os materiais aqui organizados abrangem os principais tópicos da disciplina, com foco em lógica computacional e manipulação eficiente de dados por meio de estruturas adequadas. Os temas abordados incluem:
+
+- Listas (simples, duplamente e circularmente encadeadas)
+- Pilhas
+- Filas (simples, com prioridade e circulares)
+- Árvores (binárias, de busca, balanceadas)
+- Grafos (representação e percursos)
+- Tabelas Hash
+- Algoritmos de ordenação e busca
+- Análise de complexidade (notações O, Ω, Θ)
+
+## 🧠 Objetivo
+
+Este repositório tem como objetivo registrar o progresso da disciplina, reforçar o aprendizado com implementações práticas e facilitar revisões futuras de forma organizada.
 
 ---
 
