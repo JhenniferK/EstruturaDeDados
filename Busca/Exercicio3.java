@@ -1,8 +1,8 @@
 // Recursividade para imprimir números pares até N
 
-package org.example;
+package Busca;
 
-public class Main {
+public class Exercicio3 {
     public static void imprimirPares(int n) {
         if (n < 0) {
             return;

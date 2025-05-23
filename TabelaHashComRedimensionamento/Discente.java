@@ -1,3 +1,5 @@
+package TabelaHashComRedimensionamento;
+
 public class Discente {
     private int matricula;
     private String nome;

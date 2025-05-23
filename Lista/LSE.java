@@ -1,13 +1,15 @@
 /*Implementação da Lista simplesmente encadeada
 
-• Crie o objeto do Nodo (valor e prox)
-• Crie o Objeto da ListaSEncadeada
+• Crie o objeto do Lista.Nodo (valor e prox)
+• Crie o Objeto da Lista.ListaSEncadeada
 • Precisa ter o Primeiro e Tamanho (variáveis)
 • O size retorna o tamanho da lista
 • O add (elemento) adiciona no final da lista
 • O get (index) – retorna o nodo na posição (ou null se não tem aquela posição)
 • O add (index, elemento) adiciona na posição pedida (lembrar de checar <Primeiro>)
 • O remove (index) remove o elemento daquele index da lista*/
+
+package Lista;
 
 class Nodo {
     int valor;

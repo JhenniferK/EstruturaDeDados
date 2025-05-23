@@ -1,4 +1,4 @@
-//Implementação de árvore binária com inserção, remoção e busca
+package Árvore;//Implementação de árvore binária com inserção, remoção e busca
 
 class NodoArvore {
     int valor;

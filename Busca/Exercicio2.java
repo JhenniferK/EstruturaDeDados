@@ -1,6 +1,8 @@
 //Recursividade para encontrar quantos números 2 tem numa lista
 
-public class Aula2 {
+package Busca;
+
+public class Exercicio2 {
     public static void main(String[] args) {
         int[] lista = {2, 1, 5, 2, 6, 2};
         System.out.println(contar(lista, lista.length - 1));

@@ -1,8 +1,8 @@
-//Implementar algoritmo de Ordenação: Insertion Sort
+package Ordenação;
 
 import java.util.Arrays;
 
-public class Aula3 {
+public class InsertionSort {
     public static void main(String[] args) {
         int[] lista = {5, 2, 9, 1, 4};
 

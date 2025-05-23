@@ -1,10 +1,12 @@
-public class TabelaHashComRedimensionamento {
+package TabelaHashComRedimensionamento;
+
+public class TabelaHash {
     private Discente[] tabela;
     private final Discente removido = new Discente(0, "removido");
     private int tamanho;
     private int quantidade;
 
-    public TabelaHashComRedimensionamento(int tamanhoInicial) {
+    public TabelaHash(int tamanhoInicial) {
         this.tamanho = tamanhoInicial;
         this.tabela = new Discente[tamanho];
         this.quantidade = 0;
@@ -85,7 +87,7 @@ public class TabelaHashComRedimensionamento {
     }
 
     public static void main(String[] args) {
-        TabelaHashComRedimensionamento tabela = new TabelaHashComRedimensionamento(5);
+        TabelaHash tabela = new TabelaHash(5);
 
         tabela.inserirValor(20241, "Jhennifer");
         tabela.inserirValor(20240, "Joyce");

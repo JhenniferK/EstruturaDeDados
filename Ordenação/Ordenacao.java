@@ -1,9 +1,9 @@
-//Ordenar elementos da lista
+package Ordenação;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Aula1 {
+public class Ordenacao {
     public static void main(String[] args) {
         List<Integer> valores = new ArrayList<>();
         valores.add(25);

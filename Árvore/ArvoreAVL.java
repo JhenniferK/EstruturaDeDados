@@ -1,3 +1,5 @@
+package Árvore;
+
 class NodoAVL {
     int valor;
     NodoAVL esq, dir;

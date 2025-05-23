@@ -1,14 +1,17 @@
-/*Implementação de lista encadeada circular
+/*Implementação de Lista duplamente encadeada
 
-• Crie o objeto do Nodo (valor e prox)
-• Crie o Objeto da ListaEncadeadaCircular
-• Precisa ter o Primeiro e Tamanho (variáveis)
+• Crie o objeto do Lista.Nodo (valor, prox, ant)
+• Crie o Objeto da Lista.ListaSEncadeada
+• Precisa ter o Primeiro, Último e Tamanho (variáveis)
 • O size retorna o tamanho da lista
-• O get (index) – retorna o nodo na posição (ou null se não tem aquela posição)
-• O add (index, elemento) adiciona na posição pedida (lembrar de checar <Primeiro>)
+• O addFinal (elemento) adiciona no final da lista
+• O addComeco (elemento) adiciona no começo da lista
+• O add (index, elemento) adiciona na posição pedida
 • O remove (index) remove o elemento daquele index da lista*/
 
-public class ListaCircular {
+package Lista;
+
+public class ListaDEncadeada {
     private class Nodo {
         int valor;
         Nodo prox;
@@ -32,13 +35,9 @@ public class ListaCircular {
 
         if (tamanho == 0) {
             primeiro = ultimo = novo;
-            primeiro.prox = primeiro;
-            primeiro.ant = primeiro;
         } else {
             ultimo.prox = novo;
             novo.ant = ultimo;
-            novo.prox = primeiro;
-            primeiro.ant = novo;
             ultimo = novo;
         }
 
@@ -50,13 +49,9 @@ public class ListaCircular {
 
         if (tamanho == 0) {
             primeiro = ultimo = novo;
-            primeiro.prox = primeiro;
-            primeiro.ant = primeiro;
         } else {
             novo.prox = primeiro;
             primeiro.ant = novo;
-            novo.ant = ultimo;
-            ultimo.prox = novo;
             primeiro = novo;
         }
 
@@ -95,21 +90,17 @@ public class ListaCircular {
 
         if (index == 0) {
             removido = primeiro;
-            if (tamanho == 1) {
-                primeiro = ultimo = null;
+            primeiro = primeiro.prox;
+            if (primeiro != null) {
+                primeiro.ant = null;
             } else {
-                primeiro = primeiro.prox;
-                primeiro.ant = ultimo;
-                ultimo.prox = primeiro;
+                ultimo = null;
             }
         } else if (index == tamanho - 1) {
             removido = ultimo;
-            if (tamanho == 1) {
-                primeiro = ultimo = null;
-            } else {
-                ultimo = ultimo.ant;
-                ultimo.prox = primeiro;
-                primeiro.ant = ultimo;
+            ultimo = ultimo.ant;
+            if (ultimo != null) {
+                ultimo.prox = null;
             }
         } else {
             removido = getNodo(index);
@@ -147,13 +138,9 @@ public class ListaCircular {
     }
 
     public void printLista() {
-        if (tamanho == 0) {
-            System.out.println("Lista vazia");
-            return;
-        }
-
         Nodo atual = primeiro;
-        for (int i = 0; i < tamanho; i++) {
+
+        while (atual != null) {
             System.out.print(atual.valor + " ");
             atual = atual.prox;
         }
@@ -162,7 +149,7 @@ public class ListaCircular {
     }
 
     public static void main(String[] args) {
-        ListaCircular lista = new ListaCircular();
+        ListaDEncadeada lista = new ListaDEncadeada();
 
         lista.addFinal(10);
         lista.addFinal(20);
@@ -176,9 +163,6 @@ public class ListaCircular {
         lista.printLista();
 
         lista.remove(3);
-        lista.printLista();
-
-        lista.remove(0);
         lista.printLista();
 
         System.out.println("Tamanho da lista: " + lista.size());
